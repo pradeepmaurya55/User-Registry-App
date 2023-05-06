@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
@@ -7,4 +11,17 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+input,
+select {
+  @apply p-1 bg-transparent border-2 border-gray-600 rounded-md;
+}
+
+form {
+  @apply flex flex-wrap justify-center p-2 m-2 mx-auto bg-transparent rounded-lg shadow-lg sm:w-11/12 md:w-4/5;
+}
+
+#submit {
+  @apply p-2 duration-300 bg-gray-200 border-2 border-gray-500 rounded-lg hover:bg-gray-400 hover:text-gray-950 hover:border-gray-300;
 }
