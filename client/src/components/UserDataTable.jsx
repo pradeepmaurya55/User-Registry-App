@@ -42,7 +42,7 @@ const UserDataTable = () => {
     },
     {
       name: "Guardian Name",
-      selector: (row) => row.guardianName,
+      selector: (row) => row.gaurdianName,
     },
     {
       name: "Emergency Contact",
@@ -78,7 +78,7 @@ const UserDataTable = () => {
     },
     {
       name: "Marital Status",
-      selector: (row) => row.otherDetails.maritalStatus,
+      selector: (row) => row.otherDetails.maritialStatus,
     },
     {
       name: "Blood Group",
@@ -86,7 +86,7 @@ const UserDataTable = () => {
     },
     {
       name: "Nationality",
-      selector: (row) => row.otherDetails.Nationality,
+      selector: (row) => row.otherDetails.nationality,
     },
   ];
 
