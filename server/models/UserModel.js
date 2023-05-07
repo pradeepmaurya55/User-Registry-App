@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 
 const AddressSchema = new mongoose.Schema(
   {
-    addressLine: { type: String },
+    address: { type: String },
     state: { type: String },
     city: { type: String },
     country: { type: String },
@@ -46,14 +46,15 @@ const UserSchema = new mongoose.Schema({
 });
 
 UserSchema.path("idType").validate(function (value) {
-  if (value === "AADHAR" || value === "PAN") return true;
+  if (value === "AADHAR" || value === "PAN" || value === null) return true;
   return false;
 }, "Invalid ID Type");
 
 UserSchema.path("idNumber").validate(function (value) {
-  if (this.idType === "AADHAR") return value.length == 12 && isNaN(value);
+  if (this.idType === "AADHAR") return value.length === 12 && !isNaN(value);
   else if (this.idType === "PAN")
-    return value.length == 10 && /^[a-zA-Z0-9]+$/.test(value);
+    return value.length === 10 && /^[a-zA-Z0-9]+$/.test(value);
+  else if (this.idType === null && value === null) return true;
   else return false;
 }, "Invalid  ID Number");
 

@@ -1,0 +1,141 @@
+{
+  "title": "Register",
+  "fieldsets": [
+    {
+      "title": "Personal Details",
+      "fields": [
+        {
+          "title": "Name",
+          "type": "text",
+          "name": "name"
+        },
+        {
+          "title": "Age",
+          "type": "number",
+          "name": "age"
+        },
+        {
+          "title": "Sex",
+          "type": "select",
+          "name": "sex",
+          "options": ["Male", "Female", "Other"]
+        },
+        {
+          "title": "Mobile",
+          "type": "number",
+          "name": "mobile"
+        },
+        {
+          "title": "Govt issued ID",
+          "type": "select",
+          "name": "idType",
+          "options": ["AADHAR", "PAN"]
+        },
+        {
+          "title": "",
+          "type": "text",
+          "name": "idNumber"
+        }
+      ]
+    },
+    {
+      "title": "Contact Details",
+      "fields": [
+        {
+          "title": "Email",
+          "type": "email",
+          "name": "email"
+        },
+        {
+          "title": "Emergency Contact Number",
+          "type": "number",
+          "name": "emergenecyContact"
+        },
+        {
+          "title": "Guardian Details",
+          "type": "select",
+          "name": "label",
+          "options": ["Mr.", "Mrs.", "Miss"]
+        },
+        {
+          "title": "",
+          "type": "text",
+          "name": "guardianName"
+        }
+      ]
+    },
+    {
+      "title": "Address Details",
+      "fields": [
+        {
+          "title": "Address",
+          "type": "text",
+          "name": "address",
+          "ref": "address.address"
+        },
+        {
+          "title": "State",
+          "type": "text",
+          "name": "state",
+          "ref": "address.state"
+        },
+        {
+          "title": "City",
+          "type": "text",
+          "name": "city",
+          "ref": "address.city"
+        },
+        {
+          "title": "Country",
+          "type": "text",
+          "name": "country",
+          "ref": "address.country"
+        },
+        {
+          "title": "Pincode",
+          "type": "number",
+          "name": "pincode",
+          "ref": "address.pincode"
+        }
+      ]
+    },
+    {
+      "title": "Other Details",
+      "fields": [
+        {
+          "title": "Occupation",
+          "type": "text",
+          "name": "occupation",
+          "ref": "otherDetails.occupation"
+        },
+        {
+          "title": "Religion",
+          "type": "text",
+          "name": "religion",
+          "ref": "otherDetails.religion"
+        },
+        {
+          "title": "Marital Status",
+          "type": "select",
+          "name": "maritalStatus",
+          "options": ["Married", "Single", "Divorced", "Separated"],
+          "ref": "otherDetails.maritalStatus"
+        },
+        {
+          "title": "Blood Group",
+          "type": "select",
+          "name": "bloodGroup",
+          "options": ["A+", "B+", "O+", "AB+", "A-", "B-", "O-", "AB-"],
+          "ref": "otherDetails.bloodGroup"
+        },
+        {
+          "title": "Nationality",
+          "type": "select",
+          "name": "nationality",
+          "options": ["Indian", "Other"],
+          "ref": "otherDetails.nationality"
+        }
+      ]
+    }
+  ]
+}

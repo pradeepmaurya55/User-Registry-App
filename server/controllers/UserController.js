@@ -1,7 +1,6 @@
 const UserModel = require("../models/UserModel");
 
 const getUsers = async (req, res) => {
-  console.log(`Req : ${req}`);
   const users = await UserModel.find();
   res.status(200).send(users);
 };
@@ -18,10 +17,9 @@ const getPaginatedUsers = async (req, res) => {
 
 const saveUser = async (req, res) => {
   const data = req.body;
+
   UserModel.create(data)
     .then((data) => {
-      console.log("User addded");
-      console.log(data);
       res.status(201).send(data);
     })
     .catch((err) => {
