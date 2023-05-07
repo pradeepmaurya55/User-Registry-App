@@ -8,7 +8,6 @@ const UserDataTable = () => {
   const getUsers = async () => {
     try {
       const response = await axios.get(process.env.REACT_APP_API_URL);
-      console.log(response);
       setUsers(response.data);
     } catch (error) {
       console.log(error);
@@ -46,11 +45,12 @@ const UserDataTable = () => {
     },
     {
       name: "Emergency Contact",
-      selector: (row) => row.email,
+      selector: (row) => row.emergencyContact,
     },
     {
       name: "Address",
       selector: (row) => row.address.address,
+      width: "auto",
     },
     {
       name: "State",
@@ -102,6 +102,7 @@ const UserDataTable = () => {
       responsive
       pagination
       highlightOnHover
+      expandOnRowDoubleClicked
     />
   );
 };

@@ -120,7 +120,7 @@ const Form = ({ data, schema, onSubmit, onError }) => {
       return (
         <fieldset
           key={fieldSet.title}
-          className="grid items-center justify-start w-full grid-cols-4 gap-2 p-2 m-2 text-sm border-4 border-gray-200 rounded-md ring-slate-800"
+          className="grid items-center justify-start w-full grid-cols-2 gap-2 p-2 m-2 text-sm border-4 border-gray-200 rounded-md md:grid-cols-4 ring-slate-800"
         >
           <legend className="p-2 font-thin text-left">{fieldSet.title}</legend>
           {renderField(fieldSet.fields)}

@@ -17,7 +17,7 @@ const getPaginatedUsers = async (req, res) => {
 
 const saveUser = async (req, res) => {
   const data = req.body;
-  console.log(req.body);
+
   UserModel.create(data)
     .then((data) => {
       res.status(201).send(data);

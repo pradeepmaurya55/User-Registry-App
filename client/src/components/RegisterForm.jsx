@@ -102,7 +102,6 @@ const RegisterForm = () => {
 
   const onSubmit = async (values) => {
     console.log("Submit clicked");
-    console.log(values);
     try {
       if (values?.guardianName) {
         values.guardianName =
